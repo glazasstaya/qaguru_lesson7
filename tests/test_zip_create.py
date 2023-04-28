@@ -16,15 +16,13 @@ def test_zip_file_create():
     with ZipFile(zip_file, mode = 'w') as newzip:
         os.chdir(dir_to_zip)
         for f in content:
-            if f != 'newfile.zip':
-                newzip.write(f)
+            newzip.write(f)
 
     with ZipFile(zip_file)  as newzip:
         content_list = newzip.namelist()
         print(content_list)
         for f in content:
-            if f != 'newfile.zip':
-                assert f in content_list
+            assert f in content_list
         assert len(content) == len(content_list)
 
     os.remove(zip_file)
