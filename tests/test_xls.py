@@ -4,7 +4,7 @@ from tests.funtions import resources_path
 #оформить в тест, добавить ассерты и использовать универсальный путь
 
 def test_xls_info():
-    file = resources_path('file_example_XLS_10.xls')
+    file = resources_path('resources', 'file_example_XLS_10.xls')
     book = xlrd.open_workbook(file)
     print(f'Количество листов {book.nsheets}')
     print(f'Имена листов {book.sheet_names()}')

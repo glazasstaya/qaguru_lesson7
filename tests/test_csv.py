@@ -5,7 +5,7 @@ from tests.funtions import resources_path
 # оформить в тест, добавить ассерты и использовать универсальный путь
 
 def test_csv_write_and_read():
-    file = resources_path('eggs.csv')
+    file = resources_path('resources', 'eggs.csv')
     rows = []
 
     with open(file, 'w') as csvfile:

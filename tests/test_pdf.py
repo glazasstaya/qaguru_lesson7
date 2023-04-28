@@ -3,7 +3,7 @@ from tests.funtions import resources_path
 # TODO оформить в тест, добавить ассерты и использовать универсальный путь
 
 def test_pdf_info():
-    file = resources_path('docs-pytest-org-en-latest.pdf')
+    file = resources_path('resources', 'docs-pytest-org-en-latest.pdf')
 
     reader = PdfReader(file)
     number_of_pages = len(reader.pages)
